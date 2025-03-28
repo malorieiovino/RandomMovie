@@ -23,12 +23,24 @@ const RandomMovieGenerator = () => {
     "The Lion King"
   ];
   
-  // Initialize with default movies
+  // Load saved movies from localStorage or use defaults
   useEffect(() => {
-    if (useDefaultMovies) {
+    const savedMovies = localStorage.getItem('movieList');
+    const savedDefaultSetting = localStorage.getItem('useDefaultMovies');
+    
+    if (savedMovies) {
+      setMovies(JSON.parse(savedMovies));
+      setUseDefaultMovies(savedDefaultSetting === 'true');
+    } else if (useDefaultMovies) {
       setMovies(defaultMovies);
     }
   }, []);
+  
+  // Save movies to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('movieList', JSON.stringify(movies));
+    localStorage.setItem('useDefaultMovies', useDefaultMovies.toString());
+  }, [movies, useDefaultMovies]);
 
   // Function to add a movie to the list
   const addMovie = () => {
@@ -77,10 +89,26 @@ const RandomMovieGenerator = () => {
       return;
     }
     
-    const randomIndex = Math.floor(Math.random() * movies.length);
-    setRandomMovie(movies[randomIndex]);
-    setErrorMessage('');
+    try {
+      const randomIndex = Math.floor(Math.random() * movies.length);
+      setRandomMovie(movies[randomIndex]);
+      
+      // Save the last selected movie to localStorage
+      localStorage.setItem('lastRandomMovie', movies[randomIndex]);
+      setErrorMessage('');
+    } catch (error) {
+      console.error('Error generating random movie:', error);
+      setErrorMessage('Something went wrong. Please try again.');
+    }
   };
+  
+  // Load the last generated movie when the app starts
+  useEffect(() => {
+    const lastMovie = localStorage.getItem('lastRandomMovie');
+    if (lastMovie) {
+      setRandomMovie(lastMovie);
+    }
+  }, []);
 
   // Handle key press for adding movies
   const handleKeyPress = (e) => {
