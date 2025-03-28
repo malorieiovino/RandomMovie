@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Random Movie Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, user-friendly web application that helps you decide what movie to watch by randomly selecting from your custom movie list.
 
-## Available Scripts
+## 🎬 Features
 
-In the project directory, you can run:
+- **Add Your Favorite Movies**: Build a personalized collection of movies
+- **Generate Random Selections**: Get a random movie suggestion with just one click
+- **Persistent Storage**: Your movie list is saved automatically between visits
+- **Clean, Simple Interface**: Easy to use on any device with a web browser
+- **Default Suggestions**: Comes pre-loaded with 10 popular movies to get you started
 
-### `npm start`
+## 📱 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Try it out: [Random Movie Generator](https://malorieiovino.github.io/RandomMovie)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 How to Use
 
-### `npm test`
+1. **Visit** the application at [https://malorieiovino.github.io/RandomMovie](https://malorieiovino.github.io/RandomMovie)
+2. **Add movies** by typing the title in the input field and clicking "Add" (or pressing Enter)
+3. **Generate a random movie** by clicking the "Generate Random Movie" button
+4. **Manage your list** by removing individual movies or using the "Clear All" button
+5. **Reset to defaults** if you want to restore the initial movie suggestions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💾 Data Storage
 
-### `npm run build`
+Your movie list is stored locally in your browser using localStorage. This means:
+- Your data persists between visits as long as you use the same browser on the same device
+- Your movies are private to your browser and not shared with any server
+- Clearing browser data or using incognito/private browsing will reset your movie list
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technical Details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was built with:
+- React.js
+- JavaScript (ES6+)
+- CSS3
+- localStorage API
+- GitHub Pages (for hosting)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Local Development
 
-### `npm run eject`
+If you want to run this project locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```
+   git clone https://github.com/malorieiovino/RandomMovie.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory:
+   ```
+   cd RandomMovie
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-## Learn More
+5. Open your browser to `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📋 Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Potential features for future versions:
+- Movie categories/tags
+- Rating system
+- Search functionality
+- Integration with movie databases for details and posters
+- Filter by genre, length, or other criteria
 
-### Code Splitting
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is open source and available under the [MIT License](LICENSE).
 
-### Analyzing the Bundle Size
+## 👥 Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Malorie Iovino](https://github.com/malorieiovino)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute to this project by creating issues or submitting pull requests!
